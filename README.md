@@ -8,6 +8,9 @@
 
 This fork adds a Hyva Themes adapter alongside the existing Luma/RequireJS/Knockout
 and Admin integration, using the same Magento module and configuration.
+
+![Cloudflare Turnstile on the Hyva customer registration form at Stagento.com](docs/images/hyva-registration-turnstile.png)
+
 See [Hyva installation, supported forms and verification](docs/HYVA.md).
 Magento/Hyva and Cloudflare runtime verification is pending; local tests use a mocked API.
 
