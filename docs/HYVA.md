@@ -95,9 +95,10 @@ complete desktop/mobile and cache test matrix remain unverified.
 ## Srpski
 
 Modul zadržava postojeći Luma/Knockout i Admin prikaz, a za Hyva temu automatski
-učitava zaseban JavaScript bez RequireJS-a. Podešavanja i serverska provera tokena
-ostaju zajednički. Na Stagento.com potvrđeni su prikaz widgeta, uspešna registracija
-sa validnim tokenom i uspešna Cloudflare Siteverify provera. Test bez tokena je
-takođe prošao: server je odbio registraciju bez Turnstile tokena.
-Ova potvrda važi za osnovni tok Hyva registracije. Posebni checkout sistemi,
+učitava zaseban JavaScript bez RequireJS-a. 
+Podešavanja i serverska provera tokenaostaju zajednički. 
+Na Stagento.com potvrđeni su prikaz widgeta, uspešna registracija sa validnim tokenom 
+i uspešna Cloudflare Siteverify provera. 
+Test bez tokena je takođe prošao: server je odbio registraciju bez Turnstile tokena.
+Ova potvrda važi za osnovni tok Hyva registracije. Posebni checkout sistemi, 
 REST/GraphQL i prilagođene AJAX forme zahtevaju zasebnu integraciju.
