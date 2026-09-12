@@ -7,7 +7,7 @@
     "magento/framework": "*"
   },
   "type": "magento2-module",
-  "version": "100.3.0",
+  "license": "MIT",
   "autoload": {
     "files": [
       "registration.php"

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="PixelOpen_CloudflareTurnstile::css/hyva-turnstile.css"/>
+        <script src="PixelOpen_CloudflareTurnstile::js/hyva/turnstile.js" defer="defer"/>
+    </head>
+    <body>
+        <referenceBlock name="pixel.open.cloudflare.turnstile.register" remove="true"/>
+        <referenceBlock name="pixel.open.cloudflare.turnstile.login" remove="true"/>
+        <referenceBlock name="pixel.open.cloudflare.turnstile.password" remove="true"/>
+        <referenceBlock name="pixel.open.cloudflare.turnstile.contact" remove="true"/>
+        <referenceBlock name="pixel.open.cloudflare.turnstile.review" remove="true"/>
+        <referenceBlock name="pixel.open.cloudflare.turnstile.newsletter" remove="true"/>
+        <referenceBlock name="pixel.open.cloudflare.turnstile.newsletter.append.to" remove="true"/>
+        <referenceContainer name="before.body.end">
+            <block name="pixel.open.cloudflare.turnstile.hyva" template="PixelOpen_CloudflareTurnstile::hyva/config.phtml" ifconfig="pixel_open_cloudflare_turnstile/frontend/enabled">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">PixelOpen\CloudflareTurnstile\ViewModel\HyvaConfig</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

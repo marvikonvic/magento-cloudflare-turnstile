@@ -1,0 +1,7 @@
+.pixelopen-turnstile {
+    margin-block: 1rem;
+}
+
+.pixelopen-turnstile [role="status"] {
+    color: #b91c1c;
+}

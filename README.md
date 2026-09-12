@@ -4,6 +4,13 @@
 [![Minimum Magento Version](https://img.shields.io/badge/magento-%3E%3D%202.4.4-green)](https://business.adobe.com/products/magento/magento-commerce.html)
 [![GitHub release](https://img.shields.io/github/v/release/Pixel-Open/magento-cloudflare-turnstile)](https://github.com/Pixel-Open/magento-cloudflare-turnstile/releases)
 
+## Hyva compatibility branch
+
+This fork adds a Hyva Themes adapter alongside the existing Luma/RequireJS/Knockout
+and Admin integration, using the same Magento module and configuration.
+See [Hyva installation, supported forms and verification](docs/HYVA.md).
+Magento/Hyva and Cloudflare runtime verification is pending; local tests use a mocked API.
+
 ## Presentation
 
 [Turnstile](https://developers.cloudflare.com/turnstile/) is Cloudflare's smart CAPTCHA alternative. The module allows Turnstile to protect your Magento OpenSource or Adobe Commerce forms.

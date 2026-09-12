@@ -1,0 +1,6 @@
+{
+  "name": "pixelopen-turnstile-frontend-tests",
+  "private": true,
+  "scripts": {"test": "node --test Test/frontend/*.test.cjs"},
+  "devDependencies": {"jsdom": "26.1.0"}
+}

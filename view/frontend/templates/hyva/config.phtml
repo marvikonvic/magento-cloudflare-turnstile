@@ -1,0 +1,7 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \Magento\Framework\Escaper $escaper */
+/** @var \PixelOpen\CloudflareTurnstile\ViewModel\HyvaConfig $viewModel */
+$viewModel = $block->getData('view_model');
+?>
+<div hidden data-pixelopen-turnstile-config="<?= $escaper->escapeHtmlAttr($viewModel->getJson()) ?>"></div>
