@@ -76,14 +76,28 @@ Before deployment acceptance, check both Luma and Hyva store views: register a
 test customer, submit without a token (must fail), replay a consumed token (must
 fail), verify newsletter plus registration together, retry a failed popup login,
 and confirm Siteverify validations in Cloudflare. Check desktop/mobile layouts
-and the browser console, with full-page cache enabled. Real Magento/Hyva and
-Cloudflare runtime verification remains pending for this branch.
+and the browser console, with full-page cache enabled.
+
+### Confirmed on Stagento.com
+
+The user verified the Hyva registration flow with commit `6c1e306` installed:
+
+- The Turnstile widget displayed successfully.
+- Registration with a valid token created a customer account.
+- Cloudflare analytics recorded one Siteverify request and one valid token.
+- Submitting registration without `cf-turnstile-response`, bypassing the frontend
+  submit handler, was rejected by the server with a security validation error.
+
+These results confirm the basic Hyva registration flow, including server-side
+rejection of a missing token. Token replay, other forms, Luma runtime, and the
+complete desktop/mobile and cache test matrix remain unverified.
 
 ## Srpski
 
 Modul zadržava postojeći Luma/Knockout i Admin prikaz, a za Hyva temu automatski
 učitava zaseban JavaScript bez RequireJS-a. Podešavanja i serverska provera tokena
-ostaju zajednički. Za Stagento prvo uključiti samo `register`, pa testirati uspešnu
-registraciju, odbijanje zahteva bez tokena i Cloudflare Siteverify evidenciju.
-Lokalni testovi nisu potvrda rada na Magento serveru. Posebni checkout sistemi,
+ostaju zajednički. Na Stagento.com potvrđeni su prikaz widgeta, uspešna registracija
+sa validnim tokenom i uspešna Cloudflare Siteverify provera. Test bez tokena je
+takođe prošao: server je odbio registraciju bez Turnstile tokena.
+Ova potvrda važi za osnovni tok Hyva registracije. Posebni checkout sistemi,
 REST/GraphQL i prilagođene AJAX forme zahtevaju zasebnu integraciju.

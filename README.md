@@ -12,7 +12,14 @@ and Admin integration, using the same Magento module and configuration.
 ![Cloudflare Turnstile on the Hyva customer registration form at Stagento.com](docs/images/hyva-registration-turnstile.png)
 
 See [Hyva installation, supported forms and verification](docs/HYVA.md).
-Magento/Hyva and Cloudflare runtime verification is pending; local tests use a mocked API.
+Registration was successfully tested on Stagento.com with the Hyva theme:
+
+- A customer account was created with a valid Turnstile token.
+- Cloudflare recorded a successful server-side Siteverify validation.
+- A registration request submitted without a Turnstile token was rejected by the server with a security validation error.
+
+These runtime results cover the Hyva registration flow. Other forms and Luma runtime
+verification remain pending; local automated tests use a mocked API.
 
 ## Presentation
 
